@@ -46,6 +46,51 @@ To purchase or request an activation key, please contact me directly on Facebook
 
 ---
 
+---
+
+## 📖 How to Use the Songhub Remote
+
+This remote acts as a Bluetooth keyboard for your TV, PC, or Smartphone, and is controlled via the built-in Wi-Fi Web Interface.
+
+### 1. How to Connect (TV, PC, or Mobile)
+1. **Power the ESP32:** Plug the ESP32 into a power source (like a phone charger or TV USB port).
+2. **Connect to Wi-Fi:** On your phone or PC, go to Wi-Fi settings and connect to the network named **"Videoke Remote"** (or "Videoke Remote (Unactivated)").
+3. **Open the Remote:** Open a web browser (Chrome, Safari, etc.) and type `192.168.4.1` in the address bar. You will see the Remote UI.
+4. **Pair via Bluetooth:** 
+   * Turn on Bluetooth on your Smart TV, PC, or Phone. 
+   * Search for new devices and pair with **"Videoke Remote"**.
+   * Once connected, the status dot on the web interface will turn **Green** (Bluetooth Connected).
+
+---
+
+### 2. Button Functions (Web UI & Physical Keypad)
+
+Here is what each button does when connected to your device:
+
+#### 🔢 Number Keys (0 - 9)
+*   **Function:** Types the numbers directly into your TV/PC.
+*   **Use Case:** Use this to input the **Song Code** on your Videoke system. The web screen will display the 6-digit code you are typing. 
+
+#### 🅰️ 'A' Button (Melody)
+*   **Use Case:** Used to toggle the **Melody/Vocal Guide** on/off in most Videoke software.
+
+#### 🅱️ 'B' Button (Reserve/Enter)
+*   **Use Case:** Used to **Reserve** a song after typing the code, or to confirm a selection.
+
+#### ©️ 'C' Button (Clear All)
+*   **Use Case:** Use this if you typed the wrong song code and want to start over.
+
+#### 🇩 'D' Button (Background)
+*   **Use Case:** Used to toggle the **Background Video (BGV)** on or off.
+
+#### ⭐ '*' Button (Stop)
+*   **Use Case:** Stops the current song playing.
+
+#### #️⃣ '#' Button (Play/Pause)
+*   **Use Case:** Pauses or plays the current song.
+
+  
+
 ## ⚠️ Disclaimer
 *   **No Unauthorized Distribution:** The compiled `.bin` file provided in this repository is for personal use only. Do not sell, redistribute, or claim this firmware as your own.
 *   **Hardware Risk:** Flash this firmware at your own risk. Ensure you are using the correct ESP32 board (ESP32-WROOM-32) and wiring the keypad correctly. The developer is not responsible for bricked devices or damaged hardware.
