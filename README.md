@@ -15,6 +15,30 @@ This firmware requires an activation key to unlock its full functionality.
 4. You must provide this HWID to the developer to generate a unique activation key.
 5. Enter the activation key into the web interface. Once verified, the device will unlock and the Bluetooth keypad functions will become active.
 
+---
+
+## 🔌 Hardware Wiring Guide (4x4 Keypad)
+
+To use this firmware, connect your standard 4x4 Matrix Keypad to the ESP32-WROOM-32 as shown below. 
+
+*Note: The `Keypad.h` library uses the ESP32's internal pull-up resistors, so **no external resistors are required**.*
+
+| Keypad Pin | ESP32 Pin | Keypad Row/Column |
+| :--- | :--- | :--- |
+| **R1** (Row 1) | **GPIO 13** | `1, 2, 3, A` |
+| **R2** (Row 2) | **GPIO 12** | `4, 5, 6, B` |
+| **R3** (Row 3) | **GPIO 14** | `7, 8, 9, C` |
+| **R4** (Row 4) | **GPIO 27** | `*, 0, #, D` |
+| **C1** (Col 1) | **GPIO 26** | `1, 4, 7, *` |
+| **C2** (Col 2) | **GPIO 25** | `2, 5, 8, 0` |
+| **C3** (Col 3) | **GPIO 33** | `3, 6, 9, #` |
+| **C4** (Col 4) | **GPIO 32** | `A, B, C, D` |
+
+### 💡 Important Wiring Tips:
+1. **Do Not Connect Power:** The keypad has 8 pins (R1-R4, C1-C4). **Do not** connect any of these wires to `3.3V` or `GND`.
+2. **Pin Orientation:** Looking at the front of the keypad, the leftmost pin on the header is usually `R1`, and the rightmost is `C4`.
+3. **Testing:** Once flashed, connect to the "Videoke Remote" Wi-Fi and open the web interface. Press a physical button on the keypad. If the web interface displays the wrong number (e.g., pressing '5' shows '8'), it means your Row or Column wires are swapped. Simply swap the wires to fix it.
+
 ### Getting an Activation Key:
 To purchase or request an activation key, please contact me directly on Facebook:
 * **Developer:** AldenM
